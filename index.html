@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets</title>
+</head>
+<body>
+    <form id="petForm">
+        <label for="petName">Nome dell'animale:</label>
+        <input type="text" id="petName" required>
+        <br><br><br>
+      
+        <label for="ownerName">Nome del proprietario:</label>
+        <input type="text" id="ownerName" required>
+        <br><br><br>
+      
+        <label for="species">Specie:</label>
+        <select name="species" id="species" required>
+            <option value="">Seleziona una specie</option>
+            <option value="cane" class="cane">Cane</option>
+            <option value="gatto" class="gatto">Gatto</option>
+            <option value="coniglio" class="coniglio">Dragone</option>
+        </select>
+        <br><br><br>
+
+        <label for="breed">Razza:</label>
+        <select name="breed" id="breed" required>
+            <option value="">Seleziona razza</option>
+
+            <optgroup label="Razze cani" id="razzeCani">
+                <option value="husky">husky</option>
+                <option value="san bernardo">san bernardo</option>
+                <option value="pitbull">pitbull</option>
+            </optgroup>
+
+            <optgroup label="Razze gatti" id="razzeGatti">
+                <option value="bello">bello</option>
+                <option value="persiano">persiano</option>
+                <option value="grasso">grasso</option>
+            </optgroup>
+
+            <optgroup label="Razze dragoni" id="razzeDragoni">
+                <option value="dragone nuvola">dragone nuvola</option>
+                <option value="dragone della luna di sangue">dragone della luna di sangue</option>
+                <option value="dragone della rovina">dragone della rovina</option>
+            </optgroup>
+        </select>
+        <br><br><br>
+      
+        <input type="submit" value="Crea Pet" onclick="createPet()">
+      </form>
+
+      <ul id="petList">
+      </ul>
+
+      <h2 id="msgContainer"></h2>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
